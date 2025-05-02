@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+    peer0.org1.example.com:
+        environment:
+            - SECRET_KEY=${SECRET_KEY}
+
+    peer0.org2.example.com:
+        environment:
+            - SECRET_KEY=${SECRET_KEY}

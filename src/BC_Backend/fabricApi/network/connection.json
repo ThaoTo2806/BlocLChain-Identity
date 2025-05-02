@@ -1,0 +1,82 @@
+{
+    "name": "byfn",
+    "version": "1.0.0",
+    "client": {
+        "organization": "ORG1",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "10000"
+                },
+                "orderer": "10000"
+            }
+        }
+    },
+    "channels": {
+        "supplychain": {
+            "orderers": [
+                "ord1.orderers.org1.com",
+                "ord2.orderers.org1.com",
+                "ord3.orderers.org1.com"
+            ],
+            "peers": {
+                "peer1.peers.org2.com": {},
+                "peer1.peers.org3.com": {},
+                "peer1.peers.org1.com": {}
+            }
+        }
+    },
+    "organizations": {
+        "ORG1": {
+            "mspid": "ORG1",
+            "peers": ["peer1.peers.org1.com", "peer2.peers.org1.com"]
+        }
+    },
+    "orderers": {
+        "ord1.orderers.org1.com": {
+            "url": "grpcs://xxx.xxx.xxx.xxx:7050",
+            "grpcOptions": {
+                "ssl-target-name-override": "ord1.orderers.org1.com",
+                "request-timeout": 12000
+            },
+            "tlsCACerts": {
+                "path": "ca.pem"
+            }
+        }
+    },
+    "peers": {
+        "peer1.peers.org2.com": {
+            "url": "grpcs://xxx.xxx.xxx.xxx:7051",
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.peers.org2.com",
+                "request-timeout": 12000,
+                "grpc.keepalive_time_ms": 600000
+            },
+            "tlsCACerts": {
+                "path": "ca.pem"
+            }
+        },
+        "peer1.peers.org3.com": {
+            "url": "grpcs://xxx.xxx.xxx.xxx:7051",
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.peers.org3.com",
+                "request-timeout": 12000,
+                "grpc.keepalive_time_ms": 600000
+            },
+            "tlsCACerts": {
+                "path": "ca.pem"
+            }
+        },
+        "peer1.peers.org1.com": {
+            "url": "grpcs://xxx.xxx.xxx.xxx:7051",
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.peers.org1.com",
+                "request-timeout": 12000,
+                "grpc.keepalive_time_ms": 600000
+            },
+            "tlsCACerts": {
+                "path": "ca.pem"
+            }
+        }
+    }
+}

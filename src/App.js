@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {navigationRef} from './navigation/RootNavigation';
-import AppNavigator from './navigation/AppNavigator';
+import {navigationRef} from './navigations/RootNavigation';
+import AppNavigator from './navigations/AppNavigator';
 import ToastProvider from './context/ToastProvider';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import NetworkChecker from './context/NetworkChecker';

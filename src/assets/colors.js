@@ -1,8 +1,8 @@
-const primaryColor = '#64c5c4';
-const primaryColorBold = '#028a96';
-const primaryColorLight = '#c9efee';
-const secondColor = '#f78d2d';
-const greenColor = '#009451';
+const primaryColor = '#80bfff';
+const primaryColorBold = '#0073e6';
+const primaryColorLight = '#4da9ff';
+const secondColor = '#e6f3ff';
+const blueColor = '#0077e6';
 // const backgroundColor = '#f5f5f5';
 const backgroundColor = '#fff';
 
@@ -11,6 +11,6 @@ export default {
   primaryColorBold,
   primaryColorLight,
   secondColor,
-  greenColor,
+  blueColor,
   backgroundColor,
 };

@@ -1,7 +1,8 @@
 import {MMKV} from 'react-native-mmkv';
-import config from '../config';
-import constants from '../constants';
-import Login from '../screens/Login';
+import config from '../configs/index';
+import Intro from '../screens/Intro/Intro';
+import Login from '../screens/Login/Login';
+import Register from '../screens/Register/Register';
 import HomeAd from '../screens/Admin/HomeAd';
 import Home from '../screens/User/Home';
 
@@ -10,9 +11,19 @@ const storage = new MMKV();
 
 const routes = [
   {
+    path: config.routes.intro,
+    component: Intro,
+    options: {headerShown: false},
+  },
+  {
+    path: config.routes.register,
+    component: Register,
+    options: {headerShown: false},
+  },
+  {
     path: config.routes.login,
     component: Login,
-    options: {title: constants.appName, headerTitleAlign: 'center'},
+    options: {headerShown: false},
   },
   {
     path: config.routes.homeAdmin,
@@ -45,7 +56,7 @@ export const getDefaultRoute = async () => {
   } catch (error) {
     console.log('Error fetching authentication data:', error);
   }
-  return config.routes.login; // Nếu không có token hoặc userName thì vào trang Login
+  return config.routes.intro; // Nếu không có token hoặc userName thì vào trang Intro
 };
 
 export default routes;

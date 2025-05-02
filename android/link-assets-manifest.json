@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/PlaywriteRO-VariableFont_wght.ttf",
+      "sha1": "5c1a62a5ee50b23f6c9e1d3723c484336b1008a0"
+    },
+    {
+      "path": "src/assets/fonts/QuentonSerif_PERSONAL_USE_ONLY.otf",
+      "sha1": "4f0c113ffa1fa14129a9e7c046d45535e361bfa0"
+    }
+  ]
+}
