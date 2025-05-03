@@ -5,6 +5,9 @@ import Login from '../screens/Login/Login';
 import Register from '../screens/Register/Register';
 import HomeAd from '../screens/Admin/HomeAd';
 import Home from '../screens/User/Home';
+import ListIdentity from '../screens/Admin/ListIdentity';
+import Register1 from '../screens/Admin/Register1';
+import DetailIdentity from '../screens/Admin/DetailIdentity';
 
 // Khởi tạo MMKV storage
 const storage = new MMKV();
@@ -21,6 +24,11 @@ const routes = [
     options: {headerShown: false},
   },
   {
+    path: config.routes.register1,
+    component: Register1,
+    options: {headerShown: false},
+  },
+  {
     path: config.routes.login,
     component: Login,
     options: {headerShown: false},
@@ -28,12 +36,22 @@ const routes = [
   {
     path: config.routes.homeAdmin,
     component: HomeAd,
-    options: {title: 'Trang chủ (Admin)', headerBackVisible: false},
+    options: {headerShown: false},
   },
   {
     path: config.routes.homeUser,
     component: Home,
-    options: {title: 'Trang chủ', headerBackVisible: false},
+    options: {headerShown: false},
+  },
+  {
+    path: config.routes.ListIdentity,
+    component: ListIdentity,
+    options: {headerShown: false},
+  },
+  {
+    path: config.routes.DetailIdentity,
+    component: DetailIdentity,
+    options: {headerShown: false},
   },
   // Route trong Home
 ];
